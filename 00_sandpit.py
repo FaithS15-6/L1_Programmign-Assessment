@@ -13,3 +13,6 @@ print(num_2)
 print(num_3)
 print(num_4)
 print(num_5)
+
+if num_1 > num_3:
+    print("")
