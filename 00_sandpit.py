@@ -1,5 +1,4 @@
 import random
-from typing import MutableMapping
 
 num_1 = random.randrange(1, 100)
 num_2 = num_1 / 100
