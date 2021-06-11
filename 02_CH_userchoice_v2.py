@@ -1,2 +1,19 @@
-02_CH_userchoice_v2.py
+# Functions go here
+def choice_checker (question):
+
+    valid = False
+    while not valid :
+
+        # Ask user for choice
+        response = input(question)
+
+        if response == "r" or response == "rock":
+            return response
+
+# Main routine goes here
+
+# Ask user for choice and check if it's valid
+
+user_choice = choice_checker("Choose rock / paper / scissors (r/p/s): ")
+
 
