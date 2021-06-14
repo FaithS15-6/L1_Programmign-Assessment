@@ -14,7 +14,5 @@ def choice_checker (number):
 
 # ask user for answer and check that it is correct.
 
-user_choice = choice_checker("Choose one / two / three: ")
+user_choice = choice_checker("Choose one / two / three / four / five / six: ")
 
-
-# print out choice for comparison purpose
