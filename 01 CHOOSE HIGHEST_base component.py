@@ -2,17 +2,17 @@ import random
 
     # Functions go here 
     # List of valid player response
-    
+    # Ask user if they have played befor
+    # Game instructions on how to play
+
+  # develop random numbers players can   
 num_1 = random.randrange(1, 50)
 num_2 = num_1 * 15
-num_3 = num_1 + 4
-num_4 = num_1 / -10 +2
+num_3 = num_2 + 4
+num_4 = num_3 / -10 +2
 num_5 = num_2 + 3
-num_6 = num_2 +num_3
+num_6 = num_5 +num_3
 
-list1 = [num_1, num_2, num_3, num_4, num_5, num_6 ]
-print ("Max value element :", max(list1))
-print ("Min value element :", min(list1))
 
 print("One")
 print(num_1)
@@ -51,7 +51,13 @@ def choice_checker (number):
 
 # ask user for answer and check that it is correct.
 
-user_choice = choice_checker("Choose the highest number from the list: one / two / three / four / five / six: ")
+user_choice = choice_checker("Choose the highest number from the list ")
+# Number list, 
+list1 = [num_1, num_2, num_3, num_4, num_5, num_6 ]
+# Prints out correct answers (Highest and Lowest when player is done)
+print ("Max value element :", max(list1))
+print ("Min value element :", min(list1))
+
 
 
     # Fuctions go here
