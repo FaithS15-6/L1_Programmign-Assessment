@@ -1,7 +1,7 @@
-import random
 # Functions used to check input is valid
 
 def check_rounds():
+   
     while True:
         response = input("How many rounds: ")
         round_error = "Please type either <enter> or an interger that is more than zero"
@@ -26,10 +26,9 @@ choose_instructions = "please the highest numer from the list"
 
 # Ask user for number of rounds. <enter> for infinite mode
 rounds = check_rounds()
-
 end_game = "no"
 while end_game == "no":
-
+    
     # Rounds Heading
     print()
     if rounds == "":
@@ -51,3 +50,4 @@ while end_game == "no":
 
     rounds_played += 1
 print("Thanks for playing")
+
