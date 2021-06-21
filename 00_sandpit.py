@@ -1,5 +1,13 @@
-import random
+# creating empty list
+lis = []
 
-list1 = [456, 700, 200]
-print ("Max value element :", max(list1))
-print ("Min value element :", min(list1))
+# user enters the number of elements to put in list
+count = int(input('How many numbers? '))
+
+# iterating till count to append all input elements in list
+for n in range(count):
+    number = int(input('Enter number: '))
+    lis.append(number)
+
+# displaying largest element
+print("Largest element of the list is :", max(lis))
