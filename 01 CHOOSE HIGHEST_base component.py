@@ -30,7 +30,7 @@ def intcheck(question):
 num_1 = random.randrange(1, 50)
 num_2 = num_1 * 15
 num_3 = num_2 + 4
-num_4 = num_3 / -10 +2
+num_4 = num_3 +2
 num_5 = num_2 + 3
 num_6 = num_5 +num_3
 
@@ -47,8 +47,16 @@ print()
 # ask user for answer and check that it is correct.
 
 user_choice = intcheck("Choose the highest number from the list ")
+user_choice = intcheck("Choose the lowest number from the list")
+# ways to win
+usr_input = ''
+while usr_input not in ['1', '2']:
+    usr_input = input(" ")
+
 # Number list, 
 correct = max(list1)
+
+
 
 # Prints out correct answers (Highest and Lowest when player is done)
 print ("Max value element :", max(list1))
