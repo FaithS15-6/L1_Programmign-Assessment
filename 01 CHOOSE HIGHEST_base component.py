@@ -1,6 +1,27 @@
 import random
 
-# Functions go here 
+
+# Functions go here...
+
+# checks that users answer yes/no to a question
+def yes_no(question):
+    valid = False
+    while not valid:
+        response = input(question).lower()
+
+        if response == "yes" or response == "y":
+            response = "yes"
+            return response
+
+        elif response == "no" or response == "n":
+            response = "no"
+            return response
+
+        else:
+            print("Please answer yes / no")
+
+
+# Checks that users enter a number a number between two end points
 def intcheck(question):
     while True:
         response = input(question)
@@ -25,7 +46,7 @@ def intcheck(question):
 # Game instructions on how to play
 # Checks number of rounds
 
-  # develop random numbers players can***  
+# develop random numbers players can***
 # 
 num_1 = random.randrange(1, 50)
 num_2 = num_1 * 15
@@ -49,19 +70,12 @@ print()
 user_choice = intcheck("Choose the highest number from the list ")
 user_choice = intcheck("Choose the lowest number from the list")
 # ways to win
-usr_input = ''
-while usr_input not in ['1', '2']:
-    usr_input = input(" ")
 
 # Number list, 
 correct = max(list1)
-
-
 
 # Prints out correct answers (Highest and Lowest when player is done)
 print ("Max value element :", max(list1))
 print ("Min value element :", min(list1))
 
-
-
-    # Fuctions go here
+# Functions go here
