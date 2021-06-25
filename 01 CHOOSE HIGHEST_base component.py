@@ -20,7 +20,6 @@ def yes_no(question):
         else:
             print("Please answer yes / no")
 
-
 # Checks that users enter a number a number between two end points
 def intcheck(question):
     while True:
@@ -44,6 +43,22 @@ def intcheck(question):
         return response    
 # Ask user if they have played before
 # Game instructions on how to play
+def instructions():
+    print()
+    print("**** How to play ****")
+    print()
+    print("In order to play this game...")
+    print()
+    return ""
+
+# Main Routine goes here...
+played_before = yes_no("Have you played the game before? ")
+
+if played_before == "no":
+    instructions()
+
+print()
+
 # Checks number of rounds
 
 # develop random numbers players can***
@@ -55,9 +70,11 @@ num_4 = num_3 +2
 num_5 = num_2 + 3
 num_6 = num_5 +num_3
 
-list1 = [num_1, num_2, num_3, num_4, num_5, num_6 ]
+list1 = [num_1, num_2, num_3, num_4, num_5, num_6] 
 
-print(*list1, sep= ", ")
+# shuffle numbers in list.
+random.shuffle(list1)
+print(list1)
 
 
 print()
