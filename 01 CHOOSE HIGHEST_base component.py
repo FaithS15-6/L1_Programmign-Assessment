@@ -21,26 +21,7 @@ def yes_no(question):
             print("Please answer yes / no")
 
 # Checks that users enter a number a number between two end points
-def intcheck(question):
-    while True:
-        response = input(question)
 
-        round_error = "Please type either <enter> or an " \
-                      "integer that is more than 0\n"
-
-        # If infinite mode not chosen, check response
-        # Is an integer that is more than 0
-        if response != "":
-            try:
-                response = int(response)
-
-                # If response is too low, go back to start of loop
-
-            except ValueError:
-                print(round_error)
-                continue
-
-        return response    
 # Ask user if they have played before
 # Game instructions on how to play
 def instructions():
@@ -61,6 +42,7 @@ print()
 
 # Checks number of rounds
 
+chose_instructions = "please chose the highest and lowest number in the list"
 # develop random numbers players can***
 # 
 num_1 = random.randrange(1, 50)
@@ -82,10 +64,23 @@ print()
 
 # Main routine goes here
 
-# ask user for answer and check that it is correct.
 
-user_choice = intcheck("Choose the highest number from the list ")
-user_choice = intcheck("Choose the lowest number from the list")
+# ask user for answer and check that it is correct for higest list.
+user_ans = intcheck("Choose the highest number from the list ")
+correct_answer = max(list1)
+
+if user_ans == correct_answer:
+    print ("Well done")
+else:
+    print("Oops")
+# ask user for answer and check if it is correct for lowest list.
+user_ans = intcheck("Choose the lowest number from the list")
+correct_answer = min(list1)
+
+if user_ans == correct_answer:
+    print ("Correct!!")
+else:
+    print("Damn It")
 # ways to win
 
 # Number list, 
