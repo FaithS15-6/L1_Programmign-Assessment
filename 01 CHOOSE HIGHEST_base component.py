@@ -70,13 +70,13 @@ game_summary = []
 chose_instructions = "please chose the highest"
 
 # Ask user for number of question. <enter> for infinite mode 
-question =intcheck ("How many questions:")
+question =intcheck ("How many questions?:")
 
 end_game ="no"
 while end_game == "no":
 
-# develop random numbers players can***
-# 
+# develop random numbers players choose
+
     num_1 = random.randrange(1, 50)
     num_2 = num_1 * 15
     num_3 = num_2 + 4
@@ -119,7 +119,27 @@ while end_game == "no":
     
     if question!= "" and question_answered >= question - 1:
         break
-    
+
     # Prints out correct answers (Highest and Lowest when player is done)
     print ("Max value element :", max(list1))
     print ("Min value element :", min(list1))
+
+# loops while questions answered is more than questions requested
+
+    # Start of game play loop
+    question_answered +=1
+
+    # Rounds Heading
+    print()
+    if question =="":
+        heading = "Continues Mode :Question {}".format(question_answered)
+    else:
+        heading = "Question {} of Question {}".format(question_answered, question)
+
+        print(heading)
+
+
+    if question!= "" and question_answered >= question - 1:
+        break
+
+      
