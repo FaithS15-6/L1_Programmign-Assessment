@@ -114,16 +114,21 @@ while end_game == "no":
         print("Damn It")
     # ways to win
 
+    # End Game if exit code is typed
+    if user_ans == "xxx":
+            break
+
+    
+    elif question!= "" and question_answered >= question - 1:
+        break
+
     # Number list, 
     correct = max(list1)
+
 
     # Prints out correct answers (Highest and Lowest when player is done)
     print ("Max value element :", max(list1))
     print ("Min value element :", min(list1))
-
-  # End Game if exit code is typed
-    if question_answered == "xxx":
-            break
 
 # loops while questions answered is more than questions requested
 
@@ -139,8 +144,3 @@ while end_game == "no":
 
         print(heading)
 
-
-    if question!= "" and question_answered >= question - 1:
-        break
-
-      
