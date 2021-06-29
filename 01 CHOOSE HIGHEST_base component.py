@@ -113,7 +113,12 @@ while end_game == "no":
         print("Damn It")
     # ways to win
 
-    # Number list, 
+ # End Game if exit code is typed
+    if user_ans == "xxx":
+            break
+
+      
+    # Correct answer list (highest) 
     correct = max(list1)
 
     
@@ -137,9 +142,3 @@ while end_game == "no":
         heading = "Question {} of Question {}".format(question_answered, question)
 
         print(heading)
-
-
-    if question!= "" and question_answered >= question - 1:
-        break
-
-      
