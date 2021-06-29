@@ -11,8 +11,7 @@ test_results = ["correct", "correct", "wrong", "wrong"]
 #play game
 for item in test_results:
     question_answered += 1
-
-    print(test_results)
+    print("Question {}: {} ".format(question_answered, item))
 
 print()
 # quick calculations (stats)
