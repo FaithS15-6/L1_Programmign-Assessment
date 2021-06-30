@@ -6,10 +6,10 @@ question_wrong = 0
 question_correct = 0
 
 # results for testing puposes
-test_results = ["correct", "correct", "wrong", "wrong"]
+game_summary = ["correct", "correct", "wrong", "wrong"]
 
 #play game
-for item in test_results:
+for item in game_summary:
     question_answered += 1
     print("Question {}: {} ".format(question_answered, item))
 
@@ -19,7 +19,7 @@ question_correct = question_answered - question_wrong
 
 # end of game Statistics
 print()
-print('*End Game Summary*')
+print('***End Game Summary***')
 print("Correct Answers: {} \t|\t Wrong Answers: {}".format(question_correct, question_wrong))
 print()
 print("Thanks 4 playing*")
