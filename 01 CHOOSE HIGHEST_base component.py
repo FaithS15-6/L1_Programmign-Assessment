@@ -67,7 +67,7 @@ question_correct = 0
 
 game_summary = []
 
-chose_instructions = "please chose the highest"
+chose_instructions = "please chose the highest and lowest from list"
 
 # Ask user for number of question. <enter> for infinite mode 
 question =intcheck ("How many questions?:")
@@ -75,9 +75,30 @@ question =intcheck ("How many questions?:")
 end_game ="no"
 while end_game == "no":
 
+# loops while questions answered is more than questions requested
+
+    # Start of game play loop
+    question_answered +=1
+
+    # Rounds Heading
+    print()
+    if question =="":
+        heading = "Continues Mode :Question {}".format(question_answered)
+    else:
+        heading = "Question {} of Question {}".format(question_answered, question)
+
+        print(heading)
+
+
+ # End Game if exit code is typed
+    if question_answered == "xxx":
+        break
+
+        # end game is round entered is finished.
+            
 # develop random numbers players choose
 
-    num_1 = random.randrange(1, 50)
+    num_1 = random.randrange(1, 100)
     num_2 = num_1 * 15
     num_3 = num_2 + 4
     num_4 = num_3 +2
@@ -113,11 +134,6 @@ while end_game == "no":
         print("Damn It")
     # ways to win
 
- # End Game if exit code is typed
-    if user_ans == "xxx":
-            break
-
-      
     # Correct answer list (highest) 
     correct = max(list1)
 
@@ -129,16 +145,4 @@ while end_game == "no":
     print ("Max value element :", max(list1))
     print ("Min value element :", min(list1))
 
-# loops while questions answered is more than questions requested
 
-    # Start of game play loop
-    question_answered +=1
-
-    # Rounds Heading
-    print()
-    if question =="":
-        heading = "Continues Mode :Question {}".format(question_answered)
-    else:
-        heading = "Question {} of Question {}".format(question_answered, question)
-
-        print(heading)
