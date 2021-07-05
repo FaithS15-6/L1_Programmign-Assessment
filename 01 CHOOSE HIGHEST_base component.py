@@ -49,11 +49,21 @@ def instructions():
     print()
     return ""
 
+# Add character above and below statement to make it stand out.
+def statement_generator(statement, decoration):
+    sides = decoration * 3
 
+    statement = "{} {} {}".format(sides,statement, sides)
+    top_bottom = decoration * len(statement)
+
+    print(top_bottom)
+    print(statement)
+    print(top_bottom)
+    return ""
+
+statement_generator("Welcome to the Choose Highest and Lowest Number game", "*")
 
 # Main Routine goes here...
-
-
 answered_before = yes_no("Have you played the game before? ")
 
 if answered_before == "no":
@@ -70,10 +80,13 @@ game_summary = []
 chose_instructions = "please chose the highest and lowest from list"
 
 # Ask user for number of question. <enter> for infinite mode 
-question =intcheck ("How many questions?:")
+question =intcheck ("How many questions would you like to answer?:")
 
 end_game ="no"
 while end_game == "no":
+
+    # End game when exit code (xxx)is entered.
+  
 
 # loops while questions answered is more than questions requested
 
@@ -98,9 +111,9 @@ while end_game == "no":
 
     num_1 = random.randrange(1, 100)
     num_2 = num_1 * 15
-    num_3 = num_2 + 4
+    num_3 = num_2 + 10
     num_4 = num_3 +2
-    num_5 = num_2 + 3
+    num_5 = num_2 + 7
     num_6 = num_5 +num_3
 
     list1 = [num_1, num_2, num_3, num_4, num_5, num_6] 
@@ -121,36 +134,42 @@ while end_game == "no":
     if user_ans == correct_answer:
         print ("Well done")
         result = "right"
+        chosen_dec = "!"
     else:
         print("Oops")
         result = "wrong"
+        chosen_dec = "X"
 
     part = "a"
     question_summary = "Question {}{}: {}".format(question_answered, part, result)
     game_summary.append(question_summary)
     print()
     print("Done part one")
-
+    chosen_dec = "~"
+    print()
 # check answer for lowest value
     user_ans = intcheck("Choose the lowest number from the list")
     correct_answer = min(list1)
 
     if user_ans == correct_answer:
-        print ("Correct!!")
+        print ("Correct")
         result = "right"
+        chosen_dec = "!"
     else:
-        print("Damn It")
+        print("Uh oh")
         result = "wrong"
+        chosen_dec = "x"
     
     part = "b"
     question_summary = "Question {}{}: {}".format(question_answered, part, result)
     game_summary.append(question_summary)
     print()
     print("Done part two")
-
+    chosen_dec = "*", 
+    print()
 
     
-    if question!= "" and question_answered >= question -+1:
+    if question!= "" and question_answered >= question -1:
         break
 
     # Prints out correct answers (Highest and Lowest when player is done)
