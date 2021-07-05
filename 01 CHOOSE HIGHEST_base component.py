@@ -91,8 +91,6 @@ while end_game == "no":
 
 
  # End Game if exit code is typed
-    if question_answered == "xxx":
-        break
 
         # end game is round entered is finished.
             
@@ -116,33 +114,50 @@ while end_game == "no":
 
     # ask user for answer and check that it is correct.
 
-
+#Check answers for highest value
     user_ans = intcheck("Choose the highest number from the list ")
     correct_answer = max(list1)
 
     if user_ans == correct_answer:
         print ("Well done")
+        result = "right"
     else:
         print("Oops")
+        result = "wrong"
 
+    part = "a"
+    question_summary = "Question {}{}: {}".format(question_answered, part, result)
+    game_summary.append(question_summary)
+    print()
+    print("Done part one")
+
+# check answer for lowest value
     user_ans = intcheck("Choose the lowest number from the list")
     correct_answer = min(list1)
 
     if user_ans == correct_answer:
         print ("Correct!!")
+        result = "right"
     else:
         print("Damn It")
-    # ways to win
+        result = "wrong"
+    
+    part = "b"
+    question_summary = "Question {}{}: {}".format(question_answered, part, result)
+    game_summary.append(question_summary)
+    print()
+    print("Done part two")
 
-    # Correct answer list (highest) 
-    correct = max(list1)
 
     
-    if question!= "" and question_answered >= question - 1:
+    if question!= "" and question_answered >= question -+1:
         break
 
     # Prints out correct answers (Highest and Lowest when player is done)
-    print ("Max value element :", max(list1))
-    print ("Min value element :", min(list1))
+    print ("Highest Value :", max(list1))
+    print ("Lowest Value :", min(list1))
+
+print()
+print(game_summary)
 
 
