@@ -10,9 +10,7 @@ game_summary = ["correct", "correct", "wrong", "wrong"]
 
 #play game
 for item in game_summary:
-    question_answered += 1
-    print("Question {}: {} ".format(question_answered, item))
-
+    print (item)
 print()
 # quick calculations (stats)
 question_correct = question_answered - question_wrong 
