@@ -132,44 +132,41 @@ while end_game == "no":
     correct_answer = max(list1)
 
     if user_ans == correct_answer:
-        print ("Well done")
+        statement_generator("Well done", "!")
         result = "right"
-        chosen_dec = "!"
+        
     else:
-        print("Oops")
+        statement_generator("Oops", "x")
         result = "wrong"
-        chosen_dec = "X"
+      
 
     part = "a"
     question_summary = "Question {}{}: {}".format(question_answered, part, result)
     game_summary.append(question_summary)
     print()
-    print("Done part one")
-    chosen_dec = "~"
+    statement_generator("Done part one", "~")
     print()
 # check answer for lowest value
     user_ans = intcheck("Choose the lowest number from the list")
     correct_answer = min(list1)
 
     if user_ans == correct_answer:
-        print ("Correct")
+        statement_generator ("Correct", "!")
         result = "right"
-        chosen_dec = "!"
+      
     else:
-        print("Uh oh")
+        statement_generator("Uh oh", "x")
         result = "wrong"
-        chosen_dec = "x"
+    
     
     part = "b"
     question_summary = "Question {}{}: {}".format(question_answered, part, result)
     game_summary.append(question_summary)
     print()
-    print("Done part two")
-    chosen_dec = "*", 
+    statement_generator("Done part two", "*") 
     print()
 
-    
-    if question!= "" and question_answered >= question -1:
+    if question != "" and question_answered >= question -1:
         break
 
     # Prints out correct answers (Highest and Lowest when player is done)
