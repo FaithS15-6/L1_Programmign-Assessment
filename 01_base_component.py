@@ -80,7 +80,7 @@ game_summary = []
 chose_instructions = "please chose the highest and lowest from list"
 
 # Ask user for number of question. <enter> for infinite mode 
-question =intcheck ("How many questions would you like to answer?:")
+question =intcheck ("How many questions would you like to answer?  Each question has TWO parts!!:")
 
 end_game ="no"
 while end_game == "no":
@@ -166,7 +166,7 @@ while end_game == "no":
     statement_generator("Done part two", "*") 
     print()
 
-    if question != "" and question_answered >= question -1:
+    if question != "" and question_answered >= question:
         break
 
     # Prints out correct answers (Highest and Lowest when player is done)
