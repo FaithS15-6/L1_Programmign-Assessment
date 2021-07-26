@@ -129,8 +129,9 @@ while end_game == "no":
 
     print()
 
-    # ask user for answer and check that it is correct.
+    
 
+    # ask user for answer and check that it is correct.
     #Check answers for highest value
     user_ans = intcheck("Choose the highest number from the list: ")
     correct_answer = max(list1)
@@ -138,10 +139,13 @@ while end_game == "no":
     if user_ans == correct_answer:
         statement_generator("Well done", "!")
         result = "right"
+        question_correct += 1
+     
 
     else:
         statement_generator("Oops", "x")
         result = "wrong"
+        question_wrong -= 1
 
     part = "a"
     question_summary = "Question {}{}: {}".format(question_answered, part,
@@ -157,10 +161,12 @@ while end_game == "no":
     if user_ans == correct_answer:
         statement_generator("Correct", "*")
         result = "right"
+        question_correct += 1
 
     else:
         statement_generator("Uh oh", "x")
         result = "wrong"
+        question_wrong -= 0
 
     part = "b"
     question_summary = "Question {}{}: {}".format(question_answered, part,
@@ -178,13 +184,14 @@ while end_game == "no":
     print("Lowest Value :", min(list1))
 
 # Calculate game Statistics
-percent_right = question_correct / question_answered * 100
+percent_right = (question_correct/2) / question_answered * 100
 percent_wrong = question_wrong / question_answered * 100
 
 print("***Game History***")
 print()
-print(game_summary)
-
+for item in game_summary:
+    print (item)
+print()
 print()
 # displays game stats with % values to the nearest whole number 
 print("****Game Statistics****")
@@ -196,6 +203,6 @@ print("Correct: {}, ({:.0f}%)\nWrong: {}, ({:.0f}%)".format(question_correct,
 # End of game statements*
 print()
 print("****End Game Summary*****")
-print("Correct: {} \t|\t Wrong: {} ".format(question_correct, question_wrong))
+print("Correct: {} \t|\t Wrong: {}".format(question_correct, question_wrong))
 print()
 print("Thanks 4 playing")
