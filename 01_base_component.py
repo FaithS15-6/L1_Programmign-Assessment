@@ -91,8 +91,6 @@ question = intcheck(
 end_game = "no"
 while end_game == "no":
 
-    # End game when exit code (xxx)is entered.
-
     # loops while questions answered is more than questions requested
 
     # Start of game play loop
@@ -108,8 +106,9 @@ while end_game == "no":
 
         print(heading)
 
-# End Game if exit code is typed
-
+  # End game when exit code (xxx)is entered.
+    if question_answered == "xxx":
+        break
 # end game is round entered is finished.
 
 # develop random numbers players choose
@@ -117,7 +116,7 @@ while end_game == "no":
     num_1 = random.randrange(1, 100)
     num_2 = num_1 * 15
     num_3 = num_2 + 10
-    num_4 = num_3 + 2
+    num_4 = num_3 * 8
     num_5 = num_2 + 7
     num_6 = num_5 + num_3
 
@@ -128,8 +127,6 @@ while end_game == "no":
     print(list1)
 
     print()
-
-    
 
     # ask user for answer and check that it is correct.
     #Check answers for highest value
@@ -166,7 +163,7 @@ while end_game == "no":
     else:
         statement_generator("Uh oh", "x")
         result = "wrong"
-        question_wrong -= 0
+        question_wrong -= 1
 
     part = "b"
     question_summary = "Question {}{}: {}".format(question_answered, part,
