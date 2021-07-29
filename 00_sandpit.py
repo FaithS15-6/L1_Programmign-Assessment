@@ -1,8 +1,5 @@
 import random
 
-
-import random
-
 num_list = [1, 3, 5, 31, 24, 3.4]
 
 random.shuffle(num_list)

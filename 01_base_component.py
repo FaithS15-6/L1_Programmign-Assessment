@@ -12,7 +12,11 @@ def intcheck(question):
 
         # If infinite mode not chosen, check response
         # Is an integer that is more than 0
-        if response != "":
+
+        if response == "":
+          return response
+
+        if response != "xxx":
             try:
                 response = int(response)
 
@@ -46,7 +50,7 @@ def instructions():
     print()
     print("**** How to play ****")
     print()
-    print("In order to play this game...")
+    print("This game is meant to test your number knowlege, as well as your ability to pay attention to detail. There is a list of six numbers placed in a random order. You need to choose the highest and lowest number in orer to get the perfect score!!! ")
     print()
     return ""
 
@@ -106,9 +110,7 @@ while end_game == "no":
 
         print(heading)
 
-  # End game when exit code (xxx)is entered.
-    if question_answered == "xxx":
-        break
+
 # end game is round entered is finished.
 
 # develop random numbers players choose
@@ -131,6 +133,11 @@ while end_game == "no":
     # ask user for answer and check that it is correct.
     #Check answers for highest value
     user_ans = intcheck("Choose the highest number from the list: ")
+
+  # End game when exit code (xxx)is entered.
+    if user_ans == "xxx":
+        break
+
     correct_answer = max(list1)
 
     if user_ans == correct_answer:
